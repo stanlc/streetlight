@@ -97,7 +97,6 @@
     .btnbox{
         width: 13vw;
         height: 15vh;
-        background: rgb(235, 236, 170);
         margin:  2vh auto;
     }
     .left{
