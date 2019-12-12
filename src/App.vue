@@ -8,6 +8,9 @@ html,body{
   margin: 0;
   padding: 0;
 }
+*{
+  font-family: sans-serif
+}
 body{
   background: #f1f1f1;
 }

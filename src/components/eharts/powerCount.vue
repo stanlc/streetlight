@@ -4,26 +4,22 @@
         <div class="bigtitle">
             <span>能耗统计</span>
         </div>
-        <div>
-            <span class="smalltitle">今日亮灯</span>
-            <div>
-                <div  class="bar">
-                <el-progress   :stroke-width="15" :percentage="100" :show-text="false"></el-progress> 
-                </div>
-                <span>{{alarmTotal}}次</span>
+        <div class="gap">
+            <span class="smalltitle greytext">今日亮灯</span>
+            <div  class="bar">
+            <el-progress   :stroke-width="12" :percentage="100" :show-text="false"></el-progress> 
             </div>
+            <span class="greytext">{{alarmTotal}}%</span>
         </div>
-        <div>
-            <span class="smalltitle" style="text-indent:15px">总能耗</span>
-            <div>
-                <div  class="bar">
-                <el-progress :stroke-width="15" :percentage="50"  :show-text="false"></el-progress> 
-                </div>
-                <span>{{handleNum}}次</span>
-            </div>              
+        <div class="gap">
+            <span class="smalltitle greytext" style="text-indent:14px">总能耗</span>
+            <div  class="bar">
+            <el-progress :stroke-width="12" :percentage="50"  :show-text="false"></el-progress> 
+            </div>
+            <span class="greytext">{{handleNum}}次</span>           
         </div>
-        <div style="width:300px;height:35vh;">
-            <div id="powerchart" style="width:100%;height:100%;"></div>  
+        <div style="width:20vw;height:22vh;">
+            <div id="powerchart" style="width:100%;height:110%;"></div>  
         </div>
         
     </div>
@@ -39,7 +35,11 @@
                 dayArr:[11,12,13,14,15,16],
                 powerWave:[6,4,5,7,8,7],
                 TodayCost:[4,1,2,5,5,4],
-                month:'2019-09',
+            }
+        },
+        computed:{
+            month(){
+                return localStorage.month
             }
         },
         mounted(){

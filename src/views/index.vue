@@ -16,6 +16,17 @@
         components: {
             NavMenu,
         },
+        mounted(){
+            this.getMonth()
+        },
+        methods: {
+            getMonth() {
+                const date = new Date()
+                let y = date.getFullYear()
+                let m = date.getMonth()
+                localStorage.month = y+'-'+m
+            }
+        },
     }
 </script>
 
@@ -23,8 +34,11 @@
     .smalltitle{
         float: left;
         left: 1%;
-        color: #000;
-        font-size: 16px;
+        vertical-align: middle;
+    }
+    .greytext{
+        color: #949494;
+        font-size: 14px;
     }
     .bigtitle{
         text-align:left;
@@ -37,8 +51,15 @@
         margin:0 15px;
         vertical-align: middle;
     }
+    .gap{
+        margin-bottom: 0.8vh;
+        height:20px;line-height:20px;
+        display:flex;
+        justify-content:center;
+        align-items:center
+    }
     /* 进度条样式 */
     .el-progress /deep/ .el-progress-bar__inner,.el-progress /deep/ .el-progress-bar__outer{
-        border-radius: 5px;
+        border-radius: 3px;
     }
 </style>

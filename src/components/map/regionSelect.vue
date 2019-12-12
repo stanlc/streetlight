@@ -13,7 +13,7 @@
 <style scoped>
     .mapbox{
         width: 48vw;
-        height: 64vh;
+        height: 62vh;
         background: #111;
     }
 </style>

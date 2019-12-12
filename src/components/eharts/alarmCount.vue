@@ -4,26 +4,22 @@
         <div class="bigtitle">
             <span>报警统计</span>
         </div>
-        <div>
-            <span class="smalltitle">报警总数</span>
-            <div>
-                <div  class="bar">
-                <el-progress   :stroke-width="15" :percentage="100" :show-text="false"></el-progress> 
-                </div>
-                <span>{{alarmTotal}}次</span>
+        <div class="gap">
+            <span class="smalltitle greytext">报警总数</span>
+            <div  class="bar">
+            <el-progress   :stroke-width="12" :percentage="100" :show-text="false"></el-progress> 
             </div>
+            <span class="greytext">{{alarmTotal}}次</span>
         </div>
-        <div>
-            <span class="smalltitle">报警处理</span>
-            <div>
-                <div  class="bar">
-                <el-progress :stroke-width="15" :percentage="50"  :show-text="false"></el-progress> 
-                </div>
-                <span>{{handleNum}}次</span>
-            </div>              
+        <div class="gap">
+            <span class="smalltitle greytext">报警处理</span>
+            <div  class="bar">
+            <el-progress :stroke-width="12" :percentage="50"  :show-text="false"></el-progress> 
+            </div>
+            <span class="greytext">{{handleNum}}次</span>          
         </div>
-        <div style="width:300px;height:35vh;">
-            <div id="mychart" style="width:100%;height:100%;"></div>  
+        <div style="width:20vw;height:23vh;">
+            <div id="mychart" style="width:100%;height:110%;"></div>  
         </div>
         
     </div>
@@ -36,13 +32,17 @@
                 alarmTotal: 200,
                 handleNum:180,
                 valueList:[1,4,4,5,6],
-                dayArr:[11,12,13,14,15,16],
+                dayArr:[11,12,13,14,15,16,17,18,19],
                 alarmWave:[6,4,5,7,8,7],
                 TodayAlarm:[4,1,2,5,5,4],
                 AlarmHandle:[1,2,4,1,4,12],
-                month:'2019-09',
             }
         },
+        computed:{
+            month(){
+                return localStorage.month
+            }
+        },        
         mounted(){
             this.draw()
         },
