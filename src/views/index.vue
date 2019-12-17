@@ -61,5 +61,9 @@
     /* 进度条样式 */
     .el-progress /deep/ .el-progress-bar__inner,.el-progress /deep/ .el-progress-bar__outer{
         border-radius: 3px;
+        -webkit-border-radius:3px;
+        -ms-border-radius:3px;
+        -o-border-radius:3px;
+        -moz-border-radius:3px;
     }
 </style>
